@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: normal;
+}
+body {
+  padding: 0;
+  margin: 0%;
+  background: linear-gradient(to right, rgb(53, 53, 201), rgb(227, 95, 95));
+}
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  width: 100%;
+  grid-template-columns: repeat(5, 70px);
+  grid-template-rows: minmax(100px, auto) repeat(5, 80px);
+  border-radius: 10px;
+}
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+.calculator-grid > button:active {
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+}
+.calculator-grid > button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.span2 {
+  grid-column: span 2;
+}
+.span {
+  grid-column: span 5;
+}
+.calculator-grid > button.below {
+  padding: 10px;
+  font-size: 1.3rem;
+}
+.output {
+  grid-column: 1/-1;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 20px;
+  word-wrap: break-word;
+  word-break: break-all;
+  border-radius: 5px;
+}
+.output .previous {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.5rem;
+}
+.output .current {
+  color: rgba(255, 255, 255, 1);
+  font-size: 2.5rem;
+}
+
+#modal {
+  position: absolute;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* height: 100px; */
+  width: 80%;
+
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  animation-name: animatemodal;
+  animation-duration: 0.4s;
+  opacity: 0.9;
+}
+#close-btn {
+  font-size: 3rem;
+}
+#close-btn {
+  cursor: pointer;
+  font-size: 3rem;
+  color: red;
+}
+#modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+@keyframes animatemodal {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}

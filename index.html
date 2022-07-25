@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculator</title>
+  </head>
+
+  <body>
+    <div class="calculator-grid">
+      <div class="output">
+        <div data-previous class="previous"></div>
+        <div data-current class="current"></div>
+      </div>
+      <button data-operation>%</button>
+      <button data-allclear class="span2">AC</button>
+      <button data-delete>DEL</button>
+
+      <button data-equals style="background-color: rgba(208, 237, 174, 0.8)">
+        =
+      </button>
+      <button data-operation>^</button>
+      <button data-number>7</button>
+      <button data-number>8</button>
+      <button data-number>9</button>
+      <button data-operation>+</button>
+      <button data-operation>!</button>
+      <button data-number>4</button>
+      <button data-number>5</button>
+      <button data-number>6</button>
+      <button data-operation>-</button>
+      <button data-operation>log</button>
+      <button data-number>1</button>
+      <button data-number>2</button>
+      <button data-number>3</button>
+      <button data-operation>*</button>
+      <button data-operation>ln</button>
+      <button data-number>00</button>
+      <button data-number>0</button>
+      <button data-number>.</button>
+      <button data-operation>÷</button>
+      <button id="open-btn" class="span below" style="margin-top: 10px">
+        Instructions
+      </button>
+    </div>
+    <!-- Instrurctions -->
+    <div id="modal-container">
+      <div id="modal">
+        <div>
+          <!-- Write Instructions Here -->
+          <h2>Instructions</h2>
+          <ul>
+            <li>This is a Simple Calculator.</li>
+            <li>+,-,*,/ convey their obvious meanings.</li>
+            <li>% is the modulus operator(for remainder finding)</li>
+            <li>
+              For factorial , You have to type the number , then click the !
+              button.
+            </li>
+            <li>
+              For finding log of a number (base 10), type the number then click
+              log button.
+            </li>
+            <li>
+              For finding natural log of a number (base e), type the number then
+              click log button.
+            </li>
+          </ul>
+        </div>
+
+        <div id="close-btn">&times;</div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
